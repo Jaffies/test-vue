@@ -19,3 +19,10 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+
+.background {
+  border-radius: $border-radius;
+  border: $border-width solid $border-color;
+
+  background-color: $background-color;
+}

@@ -1,32 +1,40 @@
-<script lang="ts">
+<script setup lang="ts">
+    import LeftGhostContainer from "./LeftGhostContainer.vue"
+    import InventoryContainer from "./InventoryContainer.vue"
 </script>
 
 <template>
-    <div class="background">
-        <div class="">
-            <span>asdf</span>
-            <span>asdfasdf</span>
+    <div class="frame-background">
+        <div class="vertical-flex">
+            <div class="horizontal-flex">
+                <LeftGhostContainer />
+                <InventoryContainer />
+            </div>
+            <BottomGhostContainer />
             <!-- <LeftGhostContainer />
             <InventoryContainer /> -->
         </div>
-
-        <BottomGhostContainer />
     </div>
 </template>
 
-<style scoped lang="scss">
-    .background {
+<style lang="scss" scoped>
+    .frame-background {
         display: flex;
         padding: 32px;
-        width: 640px;
-        height: 480px;
+        width: fit-content;
+        height: fit-content;
         background-color: $background-frame-color;
     }
 
-    .flex {
+    .vertical-flex {
         display: flex;
         flex-direction: column;
         gap: 24px;
         width: 100%
+    }
+
+    .horizontal-flex {
+        display: flex;
+        gap: 24px;
     }
 </style>

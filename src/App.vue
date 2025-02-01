@@ -5,6 +5,3 @@ import InventoryFrame from './components/layout/InventoryFrame.vue'
 <template>
   <InventoryFrame />
 </template>
-
-<style scoped lang="scss">
-</style>
