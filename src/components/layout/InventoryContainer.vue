@@ -1,11 +1,11 @@
-<template>
-    <div class="background">
+<script setup lang="ts">
+    import InventoryGrid from './InventoryGrid.vue';
+</script>
 
-    </div>
+<template>
+    <InventoryGrid>
+    </InventoryGrid>
 </template>
 
 <style lang="scss" scoped>
-    .background {
-        display: grid;
-    }
 </style>

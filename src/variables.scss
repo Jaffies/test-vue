@@ -1,9 +1,15 @@
-$background-frame-color: #1D1D1D;
-$background-color: #262626;
-$background-color-hover: #2F2F2F;
+@use '/settings.scss' as *;
 
-$text-color: #666666;
+$background-frame-color: if($light, #E2E2E2, #1D1D1D);
+$background-color: if($light, #D9D9D9, #262626);
+$background-color-hover: if($light, #D0D0D0, #2F2F2F);
+
+$text-color: if($light, #999999, #666666);
 
 $border-radius: 12px;
 $border-width: 1px;
-$border-color: #4D4D4D;
+$border-color: if($light, #B2B2B2, #4D4D4D);
+
+$skeleton-first-color: if($light, #C2C2C2, #3C3C3C);
+$skeleton-second-color: if($light, #BBBBBB ,#444444);
+$skeleton-third-color: if($light, #CCCCCC, #333333);

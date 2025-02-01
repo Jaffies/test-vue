@@ -1,6 +1,5 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -22,7 +21,11 @@ body {
 
 .background {
   border-radius: $border-radius;
-  border: $border-width solid $border-color;
+  // border: $border-width solid $border-color;
+
+  outline: $border-width;
+  outline-color: $border-color;
+  outline-style: solid;
 
   background-color: $background-color;
 }
