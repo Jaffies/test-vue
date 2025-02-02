@@ -2,60 +2,71 @@
 import { ref } from 'vue';
 import InfoModal from './InfoModal.vue';
 import type {Item} from '../../types/Item';
-import ItemComponent from '../ui/Item.vue';
-import { Container } from "vue-dndrop";
+import ItemComponent from '../ui/ItemComponent.vue'
 
-const item = ref<Item|undefined>()
+function createItem(id : number) {
+    return ({id : id})
+}
 
-const items = ref<Array<Item>>( Array.from(Array(25).keys(), (x) => ({id : x, w : 1, x : x % 5, y : Math.floor(x / 5)})))
+const modalItem = ref<Item|undefined>()
+const items = ref<Array<Item>>( Array.from(Array(25).keys(), x => createItem(x)))
 
 items.value[5].color = 'aqua'
 items.value[5].count = 5
 
-function deleteItem(itemId : number, count : number) {
-    const item = items.value[itemId]
+items.value[7].color = 'green'
+items.value[7].count = 10
 
+function deleteItem(item : Item, count : number) {
     if (!item.count) {
         return
     }
 
-    if (count > item.count) {
+    if (count < item.count) {
         item.count -= count
+        modalItem.value = undefined
         return
     }
 
-    delete items.value[itemId]
+    delete item.color
+    delete item.count
 }
 
 function setItem(element : Item) {
     if (!element.count) {
-        item.value = undefined
+        modalItem.value = undefined
         return
     }
 
-    item.value = element
+    modalItem.value = element
 }
 
+function onDrop(itemId : number, element : Item) {
+    const draggedItem = items.value[itemId]
+    console.log(itemId, element.id)
+
+    items.value[itemId] = element
+    items.value[element.id] = draggedItem
+
+    draggedItem.id = element.id
+    element.id = itemId   
+}
 </script>
 
 <template>
     <div class="background background-grid">              
-        <ItemComponent @click="setItem(element)" v-for="element in items" :item="element" :key="element.id"/>
-        <InfoModal :item @exit="item = undefined" :delete="deleteItem"/>
+        <ItemComponent @dropped="onDrop" @click="setItem(element)" v-for="element in items" :item="element" :key="element.id"/>
+        <InfoModal :item="modalItem" @delete="deleteItem" @exit="modalItem = undefined" :delete="deleteItem"/>
     </div>
 </template>
 
 <style lang="scss" scoped>
-    .background-grid {
-        position: relative;
-        display: grid;
-        grid-template-rows: repeat(5, 1fr);
-        grid-template-columns: repeat(5, 96px);
-        grid-auto-flow: column;
-        overflow: hidden;
-    }
-
-    .cell {
-        border-radius: 0;
-    }
+.background-grid {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 96px);
+    grid-auto-flow: column;
+    overflow: hidden;
+}
 </style>

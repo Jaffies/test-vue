@@ -24,12 +24,12 @@ const Image = defineAsyncComponent(() =>
 </template>
 
 <style scoped lang="scss">
-    .background {
-        padding: 18px 14px 24px 14px;
-        width: min-content;
-    }
+.background {
+    padding: 18px 14px 24px 14px;
+    width: min-content;
+}
 
-    .skeleton {
-        font-size: 20px;
-    }
+.skeleton {
+    font-size: 20px;
+}
 </style>

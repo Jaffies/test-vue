@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import CloseButton from '../ui/CloseButton.vue';
+import CloseButton from '../ui/CloseButton.vue';
 import Skeleton from '../ui/Skeleton.vue';
 </script>
 
@@ -9,7 +9,6 @@ import Skeleton from '../ui/Skeleton.vue';
             <Skeleton>
                 Lorem ipsum dolor sit amet don don dooooon Test
             </Skeleton>
-
         </div>
 
         <CloseButton />
@@ -17,14 +16,14 @@ import Skeleton from '../ui/Skeleton.vue';
 </template>
 
 <style lang="scss" scoped>
-    .background {
-        position: relative;
-        max-width: 100%;
-        padding: 18px 63px 18px 18px;
-        grid-column: span 2;
-    }
+.background {
+    position: relative;
+    max-width: 100%;
+    padding: 18px 63px 18px 18px;
+    grid-column: span 2;
+}
 
-    .flex {
-        width: 100% !important;
-    }
+.flex {
+    width: 100% !important;
+}
 </style>

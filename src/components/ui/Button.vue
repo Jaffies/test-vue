@@ -14,32 +14,32 @@
 </template>
 
 <style lang="scss" scoped>
-    .button {
-        color : black;
-        border: none;
-        outline: none;
+.button {
+    color : black;
+    border: none;
+    outline: none;
 
-        box-shadow: $accent-color 0 0 8px;
+    box-shadow: $accent-color 0 0 8px;
 
-        border-radius: 8px;
-        background-color: white;
+    border-radius: 8px;
+    background-color: white;
 
-        padding: 8px;
+    padding: 8px;
 
-        &:active {
-            filter : brightness(150%);
-        }
+    &:active {
+        filter : brightness(150%);
     }
+}
 
-    .link {
-        color : inherit;
-        text-decoration: inherit;
-    }
+.link {
+    color : inherit;
+    text-decoration: inherit;
+}
 
-    .close-button {
-        @extend .button;
+.close-button {
+    @extend .button;
 
-        background-color: $accent-color;
-        color: white;
-    }
+    background-color: $accent-color;
+    color: white;
+}
 </style>
