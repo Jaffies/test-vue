@@ -82,6 +82,8 @@ const visible = computed( () => "visibility :" + dragged.value ? 'hidden' : 'vis
     border: 1px solid $border-color;
     border-radius: 24px;
 
+    padding: 16px;
+
     display:inline-flex;
     justify-content: center;
     align-items: center;
