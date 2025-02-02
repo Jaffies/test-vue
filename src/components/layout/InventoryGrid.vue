@@ -8,14 +8,18 @@ function createItem(id : number) {
     return ({id : id})
 }
 
+function editItem(item : Item, color : string, count : number) {
+    item.color = color
+    item.count = count
+}
+
 const modalItem = ref<Item|undefined>()
-const items = ref<Array<Item>>( Array.from(Array(25).keys(), x => createItem(x)))
+const items = ref<Array<Item>>(Array.from(
+    Array(25).keys(), x => createItem(x)
+))
 
-items.value[5].color = 'aqua'
-items.value[5].count = 5
-
-items.value[7].color = 'green'
-items.value[7].count = 10
+editItem(items.value[5], 'aqua', 5)
+editItem(items.value[7], 'green', 15)
 
 function deleteItem(item : Item, count : number) {
     if (!item.count) {
