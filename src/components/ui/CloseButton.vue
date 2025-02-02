@@ -1,5 +1,10 @@
+<script setup lang="ts"></script>
+
 <template>
-    <img src="/src/assets/close-button.svg" class="close-button" />
+    <a href="" @click.prevent="$emit('exit')">
+        <img src="/src/assets/close-button.svg" class="close-button" />
+    </a>
+        
 </template>
 
 <style lang="scss" scoped>

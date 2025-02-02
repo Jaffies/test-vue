@@ -10,7 +10,7 @@ const Image = defineAsyncComponent(() =>
 
 <template>
     <div class="background">
-        <Image src="/src/assets/ghost-blurred-image.jpeg"/>
+        <Image src="/src/assets/ghost-blurred-image.jpeg" style="min-width: 200px;"/>
     
         <p class="skeleton">
             <Skeleton>
