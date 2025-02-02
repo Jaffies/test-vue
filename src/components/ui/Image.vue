@@ -1,12 +1,6 @@
-<script setup lang="ts">
-const props = defineProps<{
-    src? : string
-}>();
-</script>
-
 <template>
     <div class="blur">
-        <img :src="props.src" contain class="img"/>
+        <img src="/src/assets/ghost-blurred-image.jpeg" contain class="img"/>
     </div>
 </template>
 
