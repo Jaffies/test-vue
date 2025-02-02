@@ -1,17 +1,15 @@
-@use '/settings.scss' as *;
+$background-frame-color: var(--background-frame-color);
+$background-color: var(--background-color);
+$background-color-hover: var(--background-frame-color-hover);
 
-$background-frame-color: if($light, #E2E2E2, #1D1D1D);
-$background-color: if($light, #D9D9D9, #262626);
-$background-color-hover: if($light, #D0D0D0, #2F2F2F);
-
-$text-color: if($light, #999999, #666666);
+$text-color: var(--text-color);
 
 $border-radius: 12px;
 $border-width: 1px;
-$border-color: if($light, #B2B2B2, #4D4D4D);
+$border-color: var(--border-color);
 
-$skeleton-first-color: if($light, #C2C2C2, #3C3C3C);
-$skeleton-second-color: if($light, #BBBBBB ,#444444);
-$skeleton-third-color: if($light, #CCCCCC, #333333);
+$skeleton-first-color: var(--skeleton-first-color);
+$skeleton-second-color: var(--skeleton-second-color);
+$skeleton-third-color: var(--skeleton-third-color);
 
 $accent-color: #FA7272;
