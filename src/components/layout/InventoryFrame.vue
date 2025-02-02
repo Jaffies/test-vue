@@ -16,16 +16,16 @@ import InventoryGrid from './InventoryGrid.vue'
 </template>
 
 <style lang="scss" scoped>
-    .frame-background {
-        padding: 32px;
-        height: fit-content;
-        background-color: $background-frame-color;
-    }
+.frame-background {
+    padding: 32px;
+    height: fit-content;
+    background-color: $background-frame-color;
+}
 
-    .grid {
-        display: grid;
-        gap: 24px;
-        grid-template-columns: min-content 1fr;
-        grid-template-rows: min-content max-content;
-    }
+.grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content max-content;
+}
 </style>
