@@ -43,7 +43,6 @@ function setItem(element : Item) {
 
 function onDrop(itemId : number, element : Item) {
     const draggedItem = items.value[itemId]
-    console.log(itemId, element.id)
 
     items.value[itemId] = element
     items.value[element.id] = draggedItem

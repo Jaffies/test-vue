@@ -14,9 +14,8 @@ function dragStart(event : DragEvent) {
     if (!dragHTML.value) return
     if (!event.dataTransfer) return
     if (!props.item) return
+
     dragged.value = true
-
-
 
     event.dataTransfer.setDragImage(dragHTML.value, -dragHTML.value.clientWidth / 2, 0)
     event.dataTransfer.setData('id', props.item.id.toString() )

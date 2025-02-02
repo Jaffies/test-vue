@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type {Item} from '../../types/Item';
 
-    const props = defineProps<{
-        item? : Item
-    }>()
+const props = defineProps<{
+    item? : Item
+}>()
 </script>
 
 <template>

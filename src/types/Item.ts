@@ -1,6 +1,6 @@
 interface Item {
-    color? : string
-    count? : number
+    color? : string,
+    count? : number,
     id : number
 }
 
